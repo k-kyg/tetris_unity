@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Tetris</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/tetris.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Tetris</div>
-      </div>
-    </div>
-  </body>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<style>
+		.startbutton{
+			user-select: none;
+			cursor: pointer;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			width: 500px;
+			height: 100px;
+			border-radius: 12px;
+			background-color: white;
+			color: deepskyblue;
+			border: 2px solid deepskyblue;
+			transform: translate(-50%, -50%);
+			transition: 250ms ease-in;
+		}
+		.startbutton:hover{
+			background-color: deepskyblue;
+			color: white;
+			transition: 250ms ease-in;
+		}
+		h1{
+			position: absolute;
+			font-size: 50px;
+			line-height: 50px;
+			margin: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+	<title>Tetris</title>
+</head>
+<body>
+	<div class="startbutton" onclick="location.href = `game.html`">
+		<h1>スタート</h1>
+	</div>
+</body>
 </html>
